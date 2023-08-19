@@ -1,0 +1,11 @@
+. components name should always be written in capitalized. Like About.js (instead of about.js)
+. styled jsx's scope is limited to components. To enable it globally, use <style jsx global>
+. component defined in _app.js will be rendered in all pages. Like if we used <Navbar /> in _app.js, it'll be rendered in all pages
+. Can't import globals.css in any Component. to import any stylesheet it should 
+follow convention like: (For About Component, css file and convention would be):
+"About.module.css"      and then to import it in About component we use
+import styles from './About.module.css'    (then to use it in any element)
+<h1 className={`${styles.color}`}      (here color can be any selector defined in About.module.css
+
+. Any file which you wanna support routing should be placed in pages (for automatic routing)
+.In NEXT.JS convention is, use camelCase for pages and PascalCase for Components
